@@ -1,0 +1,48 @@
+{
+  "name": "unilib",
+  "version": "0.0.1",
+  "description": "Universal library",
+  "exports": {
+    "./numbers": {
+      "import": "./dist/numbers.js",
+      "types": "./dist/numbers.d.ts"
+    },
+    "./dates": {
+      "import": "./dist/dates.js",
+      "types": "./dist/dates.d.ts"
+    },
+    "./strings": {
+      "import": "./dist/strings.js",
+      "types": "./dist/strings.d.ts"
+    },
+    "./universal": {
+      "import": "./dist/universal.js",
+      "types": "./dist/universal.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rightsoftend/unilib.git"
+  },
+  "keywords": [
+    "universal",
+    "library"
+  ],
+  "author": "Volodymyr Nerovnia <nerv@i.ua>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rightsoftend/unilib/issues"
+  },
+  "homepage": "https://github.com/rightsoftend/unilib#readme",
+  "devDependencies": {
+    "@types/node": "^22.9.1",
+    "typescript": "^5.6.3"
+  }
+}
