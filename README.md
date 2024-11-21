@@ -1,9 +1,9 @@
-# unilib
+# @nerv_uk/unilib
 
 ## Installation
 
 ```
-npm install nervuk/unilib
+npm install @nervuk/unilib
 ```
 
 ## Usage
