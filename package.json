@@ -24,6 +24,7 @@
     "dist"
   ],
   "scripts": {
+    "clean": "rm -rf dist && tsc",
     "build": "tsc",
     "test": "jest"
   },
