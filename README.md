@@ -21,7 +21,7 @@ import { dayDiff } from "nervuk/unilib/dates";
 
 ## Documentation
 
-### Datess
+### Dates
 
 **dayDiff**
 **dayInYear**
