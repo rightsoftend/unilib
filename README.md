@@ -23,8 +23,9 @@ import { dayDiff } from "nervuk/unilib/dates";
 
 ### Dates
 
-**dayDiff**
-**dayInYear**
+**dayDiff** - get the number of days between the dates
+
+**dayInYear** - get the number of this day in the year
 
 ### Numbers
 
