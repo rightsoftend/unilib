@@ -18,7 +18,6 @@ import { dayDiff } from "nervuk/unilib/dates";
 - strings
 - universal
 
-
 ## Documentation
 
 ### Dates
@@ -39,11 +38,6 @@ import { dayDiff } from "nervuk/unilib/dates";
 
 **uniqueArray** - get an array of unique elements
 
-
 ## License
 
 [MIT](./LICENSE)
-
-## Keywords
-
-[universal](https://www.npmjs.com/search?q=keywords:universal) [library](https://www.npmjs.com/search?q=keywords:library)
