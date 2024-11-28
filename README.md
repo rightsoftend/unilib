@@ -34,6 +34,8 @@ import { dayDiff } from "nervuk/unilib/dates";
 
 **generateRandomString** - generate a random string
 
+**isString** - check if the value is a string
+
 ### Universal
 
 **uniqueArray** - get an array of unique elements
