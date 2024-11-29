@@ -1,6 +1,6 @@
 {
   "name": "@nerv_uk/unilib",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Universal library",
   "exports": {
     "./numbers": {
@@ -30,7 +30,7 @@
   "scripts": {
     "clean": "rm -rf dist",
     "build": "npm run build:esm && npm run build:cjs",
-    "build:esm": "tsc",
+    "build:esm": "tsc --project tsconfig.json",
     "build:cjs": "tsc --project tsconfig.cjs.json",
     "build:cjs1": "tsc --project tsconfig.cjs.json && npm run rename:cjs",
     "rename:cjs": "find dist -name '*.js' -exec sh -c 'mv \"$0\" \"${0%.js}.cjs\"' {} \\;",
