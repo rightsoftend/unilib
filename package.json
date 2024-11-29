@@ -1,6 +1,6 @@
 {
   "name": "@nerv_uk/unilib",
-  "version": "0.0.9-beta.2",
+  "version": "0.0.10",
   "description": "Universal library",
   "exports": {
     "./dist/numbers": {
