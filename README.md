@@ -9,8 +9,8 @@ npm install @nervuk/unilib
 ## Usage
 
 ```
-import { dayDiff } from "@nervuk/unilib/dist/esm/dates";
-const { isString } = require "@nervuk/unilib/dist/cjs/strings";
+import { dayDiff } from "@nervuk/unilib/dates";
+const { isString } = require "@nervuk/unilib/strings";
 ```
 ### Modules
 
