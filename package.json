@@ -1,26 +1,26 @@
 {
   "name": "@nerv_uk/unilib",
-  "version": "0.0.9-beta.1",
+  "version": "0.0.9-beta.2",
   "description": "Universal library",
   "exports": {
-    "./numbers": {
+    "./dist/numbers": {
       "import": "./dist/esm/numbers.js",
-      "require": "./dist/cjs/numbers.cjs",
+      "require": "./dist/cjs/numbers.js",
       "types": "./dist/numbers.d.ts"
     },
-    "./dates": {
+    "./dist/dates": {
       "import": "./dist/esm/dates.js",
-      "require": "./dist/cjs/dates.cjs",
+      "require": "./dist/cjs/dates.js",
       "types": "./dist/dates.d.ts"
     },
-    "./strings": {
+    "./dist/strings": {
       "import": "./dist/esm/strings.js",
-      "require": "./dist/cjs/strings.cjs",
+      "require": "./dist/cjs/strings.js",
       "types": "./dist/strings.d.ts"
     },
-    "./universal": {
+    "./dist/universal": {
       "import": "./dist/esm/universal.js",
-      "require": "./dist/cjs/universal.cjs",
+      "require": "./dist/cjs/universal.js",
       "types": "./dist/universal.d.ts"
     }
   },
