@@ -1,22 +1,26 @@
 {
   "name": "@nerv_uk/unilib",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Universal library",
   "exports": {
     "./numbers": {
       "import": "./dist/numbers.js",
+      "require": "./dist/numbers.cjs",
       "types": "./dist/numbers.d.ts"
     },
     "./dates": {
       "import": "./dist/dates.js",
+      "require": "./dist/dates.cjs",
       "types": "./dist/dates.d.ts"
     },
     "./strings": {
       "import": "./dist/strings.js",
+      "require": "./dist/strings.cjs",
       "types": "./dist/strings.d.ts"
     },
     "./universal": {
       "import": "./dist/universal.js",
+      "require": "./dist/universal.cjs",
       "types": "./dist/universal.d.ts"
     }
   },
@@ -24,8 +28,12 @@
     "dist"
   ],
   "scripts": {
-    "clean": "rm -rf dist && tsc",
-    "build": "tsc",
+    "clean": "rm -rf dist",
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "build:cjs1": "tsc --project tsconfig.cjs.json && npm run rename:cjs",
+    "rename:cjs": "find dist -name '*.js' -exec sh -c 'mv \"$0\" \"${0%.js}.cjs\"' {} \\;",
     "test": "jest"
   },
   "repository": {
