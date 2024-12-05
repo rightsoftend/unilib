@@ -6,11 +6,11 @@ name: "@nerv_uk/unilib"
 on:
   release:
     types: [created]
-  push:
-    branches: [main]
+#  push:
+#    branches: [main]
 
-  pull_request:
-    branches: [main]
+#  pull_request:
+#    branches: [main]
 
 jobs:
   build:
@@ -36,7 +36,7 @@ jobs:
       - run: pnpm test
 
   publish-npm:
-    if: github.event_name == 'release'
+#    if: github.event_name == 'release'
     needs: build
     runs-on: ubuntu-latest
     steps:
