@@ -4,8 +4,8 @@
 name: "@nerv_uk/unilib"
 
 on:
-#  release:
-#    types: [created]
+  release:
+    types: [created]
   push:
     branches: [main]
 
