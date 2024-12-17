@@ -1,5 +1,6 @@
 ![GitHub License](https://img.shields.io/github/license/rightsoftend/unilib)
 ![NPM Version](https://img.shields.io/npm/v/@nerv_uk/unilib)
+![GitHub Sponsors](https://img.shields.io/github/sponsors/nerovnia)
 
 # @nerv_uk/unilib
 
