@@ -43,4 +43,4 @@ import { isString } from '@nerv_uk/unilib/dist/strings';
 
 ## License
 
-Copyright © 2024 Volodymyr Nerovnia; Released under the [MIT](./LICENSE) license.
+Copyright © 2024 [Volodymyr Nerovnia](https://github.com/nerovnia); Released under the [MIT](./LICENSE) license.
