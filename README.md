@@ -1,4 +1,5 @@
 ![GitHub License](https://img.shields.io/github/license/rightsoftend/unilib)
+![NPM Version](https://img.shields.io/npm/v/@nerv_uk/unilib)
 
 # @nerv_uk/unilib
 
