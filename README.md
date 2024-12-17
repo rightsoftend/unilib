@@ -1,7 +1,6 @@
 ![GitHub License](https://img.shields.io/github/license/rightsoftend/unilib)
 ![NPM Version](https://img.shields.io/npm/v/@nerv_uk/unilib)
-![GitHub Sponsors](https://img.shields.io/github/sponsors/nerovnia)
-
+![NPM Downloads by package author](https://img.shields.io/npm-stat/dy/@nerv_uk)
 # @nerv_uk/unilib
 
 ## Installation
