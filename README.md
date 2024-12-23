@@ -42,7 +42,14 @@ import { isString } from '@nerv_uk/unilib/dist/strings';
 
 ### Crypt
 
-**hashPassword_sha512** - get an object  of unique elements
+**hashPassword_sha512** - use an algorithm sha512 and get an object with a hash and salt:
+
+```json
+{
+  hash: 'sha512',
+  salt: 'abcdefghijklmnopqrstuvwxy'
+}
+```
 
 ### Universal
 
