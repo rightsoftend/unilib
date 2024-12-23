@@ -40,6 +40,10 @@ import { isString } from '@nerv_uk/unilib/dist/strings';
 
 **isString** - check if the value is a string
 
+### Crypt
+
+**hashPassword_sha512** - get an object  of unique elements
+
 ### Universal
 
 **uniqueArray** - get an array of unique elements

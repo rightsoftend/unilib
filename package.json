@@ -1,6 +1,6 @@
 {
   "name": "@nerv_uk/unilib",
-  "version": "0.0.11",
+  "version": "0.0.12-beta.1",
   "description": "Universal library",
   "exports": {
     "./dist/numbers": {
@@ -17,6 +17,11 @@
       "import": "./dist/esm/strings.js",
       "require": "./dist/cjs/strings.js",
       "types": "./dist/strings.d.ts"
+    },
+    "./dist/crypt": {
+      "import": "./dist/esm/crypt.js",
+      "require": "./dist/cjs/crypt.js",
+      "types": "./dist/crypt.d.ts"
     },
     "./dist/universal": {
       "import": "./dist/esm/universal.js",
