@@ -46,8 +46,8 @@ import { isString } from '@nerv_uk/unilib/dist/strings';
 
 ```json
 {
-  hash: 'sha512',
-  salt: 'abcdefghijklmnopqrstuvwxy'
+  salt: '87678eb28f0fbf0983fc852f58d01ec1',
+  hash: '29a12437606a2badd198052c09f3ac8c081aa5b35eaacf9c18d029b012d237b8d7ec7fa4eca6a1fa1528fb70937bc93676bc3a617e013bd25e52025b3b2b1f1e'
 }
 ```
 
