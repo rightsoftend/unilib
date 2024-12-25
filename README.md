@@ -26,34 +26,58 @@ import { isString } from '@nerv_uk/unilib/dist/strings';
 
 ### Dates
 
-**dayDiff** - get the number of days between the dates
+**dayDiff(Date, Date)** - get the number of days between the dates
 
-**dayInYear** - get the number of this day in the year
+**dayInYear(Date)** - get the number of this day in the year
 
 ### Numbers
 
-**average** - calculate average
+**average(...numbers)** - calculate average
 
 ### Strings
 
-**generateRandomString** - generate a random string
+**generateRandomString(length: number)** - generate a random string
 
-**isString** - check if the value is a string
+**isString(value: any)** - check if the value is a string
+
+**isEmptyString(value: any)** - check if the value is empty string; throw Error if value is not a string
 
 ### Crypt
 
-**hashPassword_sha512** - use an algorithm sha512 and get an object with a hash and salt:
+**getSaltAndHash(password, saltSize?: 16, options?: {})** - return an object with a hash and salt
+
+options:
 
 ```json
 {
-  salt: '87678eb28f0fbf0983fc852f58d01ec1',
-  hash: '29a12437606a2badd198052c09f3ac8c081aa5b35eaacf9c18d029b012d237b8d7ec7fa4eca6a1fa1528fb70937bc93676bc3a617e013bd25e52025b3b2b1f1e'
+  iterations?: number, 
+  keyLen?: number, 
+  algorithm?: THashAlgorithm,
 }
 ```
 
+algorithm:
+
+- 'sha1'
+- 'sha224'
+- 'sha256'
+- 'sha384'
+- ...
+
+Result:
+
+```
+{
+  salt: '87678e...',
+  hash: '29a12437606a2badd1...'
+}
+```
+
+**isHashBelongPassword(password, salt, testHash, options)** - test if password's jash and testHash are equal 
+
 ### Universal
 
-**uniqueArray** - get an array of unique elements
+**uniqueArray([]: any)** - get an array of unique elements
 
 ## License
 
