@@ -3,7 +3,6 @@ import {
   IHashedPassword,
   THashAlgorithm,
 } from './types/index';
-// algorithm: THashAlgorithm = 'sha512',saltSize: number = 16, iterations: number = 100000, keyLen: number = 64): boolean => {
 
 interface IHashOptions {
   iterations?: number, 
