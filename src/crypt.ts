@@ -4,29 +4,35 @@ import {
   THashAlgorithm,
 } from './types/index';
 // algorithm: THashAlgorithm = 'sha512',saltSize: number = 16, iterations: number = 100000, keyLen: number = 64): boolean => {
-/*
+
 interface IHashOptions {
-  iterations:, 
-  keyLen:, 
-  algorithm:
+  iterations?: number, 
+  keyLen?: number, 
+  algorithm?: THashAlgorithm,
 }
-*/
-const getHash = (password: string, salt: string, algorithm: THashAlgorithm = 'sha256', iterations: number = 3000, keyLen: number = 64): string => {
+
+const defValues = {
+  algorithm: 'sha256',
+  iterations: 3000,
+  keyLen: 64,
+  saltSize: 16,
+};
+
+const getHash = (password: string, salt: string, options:IHashOptions = {} ): string => {
+  const { iterations = defValues.iterations, keyLen = defValues.keyLen, algorithm = defValues.algorithm } = options;
   return crypto.pbkdf2Sync(password, salt, iterations, keyLen, algorithm).toString('hex');
 }
 
-const createSaltAndHash = (password: string, saltSize: number = 16, algorithm: THashAlgorithm | undefined = undefined, iterations: number | undefined = undefined, keyLen: number | undefined = undefined): IHashedPassword => {
+const getSaltAndHash = (password: string, saltSize: number = defValues.saltSize, options:IHashOptions = {}): IHashedPassword => {
   const salt = crypto.randomBytes(saltSize).toString('hex');
-  const hash = getHash(password, salt, algorithm, iterations, keyLen);
-  return { salt, hash };
+  return { salt, hash: getHash(password, salt, options) };
 }
 
-const isHashBelongPassword = (password: string, salt: string, testHash: string, algorithm: THashAlgorithm | undefined = undefined, iterations: number | undefined = undefined, keyLen: number | undefined = undefined): boolean => {
-  const hash = getHash(password, salt, algorithm, iterations, keyLen);
-  return hash === testHash;
+const isHashBelongPassword = (password: string, salt: string, testHash: string, options: IHashOptions = {}): boolean => {
+  return testHash === getHash(password, salt, options);
 }
 
 export {
-  createSaltAndHash,
+  getSaltAndHash,
   isHashBelongPassword,
 }
