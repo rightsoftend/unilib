@@ -1,5 +1,5 @@
 import {
-  createSaltAndHash,
+  getSaltAndHash,
   isHashBelongPassword,
 } from "../src/crypt"
 
@@ -10,23 +10,23 @@ const password_3 = '';
 describe('crypt module', () => {
 
   test('check if salt and hash are generated', () => {
-    const testHash = createSaltAndHash(password_1);
+    const testHash = getSaltAndHash(password_1);
     expect(testHash.hash.length).toBe(128);
     expect(testHash.salt.length).toBe(32);
   });
 
   test('check if generated hash is the same in the both cases for empty password', () => {
-    const testSaltAndHash = createSaltAndHash(password_3);
+    const testSaltAndHash = getSaltAndHash(password_3);
     expect(isHashBelongPassword(password_3, testSaltAndHash.salt, testSaltAndHash.hash)).toBe(true);
   });
 
   test('check if generated hash is the same in the both cases for not empty password', () => {
-    const testSaltAndHash = createSaltAndHash(password_1);
+    const testSaltAndHash = getSaltAndHash(password_1);
     expect(isHashBelongPassword(password_1, testSaltAndHash.salt, testSaltAndHash.hash)).toBe(true);
   });
 
   test('check if generated hash is the same in the both cases', () => {
-    const testSaltAndHash = createSaltAndHash(password_1);
+    const testSaltAndHash = getSaltAndHash(password_1);
     expect(isHashBelongPassword(password_2, testSaltAndHash.salt, testSaltAndHash.hash)).toBe(false);
   });
 });
