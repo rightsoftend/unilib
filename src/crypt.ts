@@ -2,13 +2,8 @@ import * as crypto from 'crypto';
 import {
   IHashedPassword,
   THashAlgorithm,
+  IHashOptions,
 } from './types/index';
-
-interface IHashOptions {
-  iterations?: number, 
-  keyLen?: number, 
-  algorithm?: THashAlgorithm,
-}
 
 const defValues = {
   algorithm: 'sha256',
@@ -34,4 +29,7 @@ const isHashBelongPassword = (password: string, salt: string, testHash: string, 
 export {
   getSaltAndHash,
   isHashBelongPassword,
+  IHashedPassword,
+  THashAlgorithm,
+  IHashOptions,  
 }
