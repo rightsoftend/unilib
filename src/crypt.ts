@@ -3,14 +3,9 @@ import {
   IHashedPassword,
   THashAlgorithm,
   IHashOptions,
-} from './types/index';
+} from '../types/index';
 
-const defValues = {
-  algorithm: 'sha256',
-  iterations: 3000,
-  keyLen: 64,
-  saltSize: 16,
-};
+import { defValues } from './crypt/default-data';
 
 const getHash = (password: string, salt: string, options:IHashOptions = {} ): string => {
   const { iterations = defValues.iterations, keyLen = defValues.keyLen, algorithm = defValues.algorithm } = options;
