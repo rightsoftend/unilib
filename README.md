@@ -20,6 +20,7 @@ import { isString } from '@nerv_uk/unilib/dist/strings';
 - dates
 - numbers
 - strings
+- crypt
 - universal
 
 ## Documentation
