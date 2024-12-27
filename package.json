@@ -34,9 +34,7 @@
   ],
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "npm run build:esm && npm run build:cjs && npm run organize:types",
-    "build:esm": "tsc --project tsconfig.json",
-    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
     "organize:types": "find dist -name '*.d.ts' -exec mv {} dist \\;",
     "test": "jest"
   },
