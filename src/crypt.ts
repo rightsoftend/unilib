@@ -3,7 +3,7 @@ import {
   IHashedPassword,
   THashAlgorithm,
   IHashOptions,
-} from '../types/index';
+} from './types/index';
 
 import { defValues } from './crypt/default-data';
 

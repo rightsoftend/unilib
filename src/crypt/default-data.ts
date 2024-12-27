@@ -1,4 +1,4 @@
-import { IHashOptions } from "../../types";
+import { IHashOptions } from "./../types";
 
 export const defValues = {
   algorithm: 'sha256',
