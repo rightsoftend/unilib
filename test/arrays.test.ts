@@ -2,6 +2,8 @@ import {
   getRandomIndex,
   isStringArray,
   isNumberArray,
+  numberToArray,
+  arrayOfNumbersToNumber,
 } from "../src/arrays"
 
 
@@ -36,4 +38,12 @@ describe('arrays module', () => {
       }
     }
   });
+
+  test('convert number to array and back it to number', () => {
+    const arrNumbers = [2837, 129083, 378123.678, 12987, 3127836.000, 1238979];
+    for (const num of arrNumbers) {
+      expect(arrayOfNumbersToNumber(numberToArray(num))).toBe(Math.floor(num));
+    }
+  });
+
 });
