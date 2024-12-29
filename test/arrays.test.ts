@@ -23,18 +23,22 @@ describe('arrays module', () => {
   });
 
   test('get random index of array', () => {
-    const arrs: {arr: string[] | number[], testRes: boolean}[] = [
-      {arr: ['hello', 'world', 'test', 'application', 'system'], testRes: false,},
-      {arr: [3, 56, 23, 6, 43, 246, 3, 5, 6, 5, 3], testRes: true,},
+    const arrs: (string[] | number[])[] = [
+      ['hello', 'world', 'test', 'application', 'system'],
+      [3, 56, 23, 6, 43, 246, 3, 5, 6, 5, 3],
+      //{arr: []},
     ];
     for (const testObj of arrs) {
-      if (isStringArray(testObj.arr)) {
-        const ind = getRandomIndex(testObj.arr);
-        expect(ind > 0 && ind < testObj.arr.length).toBe(true);
+      console.log(testObj);
+      if (isStringArray(testObj)) {
+        const ind = getRandomIndex(testObj);
+        console.log(ind);
+        expect(ind >= 0 && ind < testObj.length).toBe(true);
       }
-      if (isNumberArray(testObj.arr)) {
-        const ind = getRandomIndex(testObj.arr);
-        expect(ind > 0 && ind < testObj.arr.length).toBe(true);
+      if (isNumberArray(testObj)) {
+        const ind = getRandomIndex(testObj);
+        console.log(ind);
+        expect(ind >= 0 && ind < testObj.length).toBe(true);
       }
     }
   });
