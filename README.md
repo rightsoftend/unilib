@@ -20,6 +20,7 @@ import { isString } from '@nerv_uk/unilib/dist/strings';
 - dates
 - numbers
 - strings
+- arrays
 - crypt
 - universal
 
@@ -35,6 +36,8 @@ import { isString } from '@nerv_uk/unilib/dist/strings';
 
 **average(...numbers)** - calculate average
 
+**randomNumber = (min: number, max:number): number** - generates a random number between the specified min and max values, inclusive
+
 ### Strings
 
 **generateRandomString(length: number)** - generate a random string
@@ -42,6 +45,18 @@ import { isString } from '@nerv_uk/unilib/dist/strings';
 **isString(value: any)** - check if the value is a string
 
 **isEmptyString(value: any)** - check if the value is empty string; throw Error if value is not a string
+
+### Arrays
+
+**isStringArray(arr: unknown[]): arr is string[]** -  check if an array is a string array
+
+**isNumberArray(arr: unknown[]): arr is number[]** - check if an array is a number array
+
+**getRandomIndex &lt;T&gt;(arr: T[]): number**  - return the random index of the array
+
+**numberToArray(num: number): number[]** - convert a single number into an array of its digits
+
+**arrayOfNumbersToNumber(arr: number[]): number** - concatenate a number array into a single number
 
 ### Crypt
 
@@ -51,9 +66,10 @@ options:
 
 ```json
 {
+  algorithm?: THashAlgorithm,
   iterations?: number, 
   keyLen?: number, 
-  algorithm?: THashAlgorithm,
+  saltSize?: number,
 }
 ```
 
