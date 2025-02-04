@@ -3,26 +3,31 @@ import {
   getScreenshot,
 } from '../../../src/libs/third-party/puppeteer';
 import path from 'node:path';
-import { existsSync, rmSync } from 'node:fs';
+import { existsSync, mkdirSync, rmSync } from 'node:fs';
 
 const testData = {
   viewport: {
     width: 1280,
     height: 720,
   },
-  screenShortFileName: './test/temp/screenshot.png',
+  tempDir: './test/temp/',
+  screenShortFileName: 'screenshot.png',
   url: 'https://example.com',
 }
 
 describe('puppeteer library', () => {
   test('is get screenshort', async () => {
-    const pathToScreenShort = path.join(process.cwd(), testData.screenShortFileName);
+    const pathToScreenShot = path.join(process.cwd(), testData.tempDir, testData.screenShortFileName);
+    const tempDir = path.join(process.cwd(), testData.tempDir);
+    if (!existsSync(tempDir)) {
+      mkdirSync(tempDir);
+    }
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto(testData.url);
-    await getScreenshot(page, testData.viewport, pathToScreenShort);
+    await getScreenshot(page, testData.viewport, pathToScreenShot);
     await browser.close();
-    expect(existsSync(pathToScreenShort)).toBe(true);
-    rmSync(pathToScreenShort);
+    expect(existsSync(pathToScreenShot)).toBe(true);
+    rmSync(pathToScreenShot);
   });
 });
