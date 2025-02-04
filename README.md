@@ -96,6 +96,10 @@ Result:
 
 **uniqueArray([]: any)** - get an array of unique elements
 
+### puppeteer
+
+**getScreenshot = async (page: Page, viewport: TViewPort, path: string)** - get a screenshot of a web page
+
 ## License
 
 Copyright © 2024 [Volodymyr Nerovnia](https://github.com/nerovnia); Released under the [MIT](./LICENSE) license.
