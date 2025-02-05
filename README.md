@@ -58,6 +58,12 @@ import { isString } from '@nerv_uk/unilib/dist/strings';
 
 **arrayOfNumbersToNumber(arr: number[]): number** - concatenate a number array into a single number
 
+#### For large arrays, avoid: "Uncaught RangeError: Maximum call stack size exceeded."
+
+**maxNumberArray** - get the largest number in the array
+
+**minNumberArray** - get the smallest number in the array
+
 ### Crypt
 
 **getSaltAndHash(password, saltSize?: 16, options?: {})** - return an object with a hash and salt
