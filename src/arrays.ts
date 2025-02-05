@@ -11,10 +11,16 @@ const numberToArray = (num: number): number[] => [...`${Math.floor(num)}`].map(n
 
 const arrayOfNumbersToNumber = (arr: number[]): number => Number(arr.join(''));
 
+const minNumberArray = (arr: number[]): number => arr.reduce((a, b) => a < b ? a : b);
+
+const maxNumberArray = (arr: number[]): number => arr.reduce((a, b) => a < b ? b : a);
+
 export {
   isStringArray,
   isNumberArray,
   getRandomIndex,
   numberToArray,
   arrayOfNumbersToNumber,
+  minNumberArray,
+  maxNumberArray,
 }
