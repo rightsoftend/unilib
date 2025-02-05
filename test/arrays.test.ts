@@ -4,7 +4,14 @@ import {
   isNumberArray,
   numberToArray,
   arrayOfNumbersToNumber,
+  minNumberArray,
+  maxNumberArray,
 } from "../src/arrays"
+
+
+import {
+  randomNumber,
+} from "../src/numbers"
 
 
 describe('arrays module', () => {
@@ -48,6 +55,19 @@ describe('arrays module', () => {
     for (const num of arrNumbers) {
       expect(arrayOfNumbersToNumber(numberToArray(num))).toBe(Math.floor(num));
     }
+  });
+
+
+  test('get the biggest number in array', () => {
+    const arrNumbers: number[] = new Array(100).map(i => randomNumber(0,999));
+    arrNumbers[80] = 1000;
+      expect(minNumberArray(arrNumbers)).toBe(1000);
+  });
+
+  test('get the smallest number in array', () => {
+    const arrNumbers: number[] = new Array(100).map(i => randomNumber(200,999));
+    arrNumbers[30] = 100;
+      expect(minNumberArray(arrNumbers)).toBe(100);
   });
 
 });
